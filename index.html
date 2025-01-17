@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Docker Commands</h1>
+
+    <h2>Docker Management Commands</h2>
+    <ul>
+        <li><code>docker --version</code> - Displays the installed Docker version.</li>
+        <li><code>docker info</code> - Provides detailed information about the Docker installation.</li>
+        <li><code>docker help</code> - Displays a list of Docker commands and their descriptions.</li>
+    </ul>
+
+    <h2>Container Management</h2>
+    <ul>
+        <li><code>docker run [options] IMAGE [COMMAND] [ARG...]</code> - Runs a container based on the specified image.</li>
+        <li><code>docker ps [options]</code> - Lists running containers.</li>
+        <li><code>docker start CONTAINER</code> - Starts a stopped container.</li>
+        <li><code>docker stop CONTAINER</code> - Stops a running container gracefully.</li>
+        <li><code>docker restart CONTAINER</code> - Restarts a container.</li>
+        <li><code>docker kill CONTAINER</code> - Forcefully stops a running container.</li>
+        <li><code>docker rm [options] CONTAINER</code> - Removes a container.</li>
+        <li><code>docker logs [options] CONTAINER</code> - Fetches logs from a container.</li>
+        <li><code>docker exec [options] CONTAINER COMMAND [ARG...]</code> - Runs a command inside a running container.</li>
+        <li><code>docker attach CONTAINER</code> - Attaches to a running container to view output or interact.</li>
+        <li><code>docker inspect CONTAINER</code> - Displays detailed information about a container.</li>
+        <li><code>docker stats [CONTAINER]</code> - Displays resource usage statistics for containers.</li>
+        <li><code>docker commit CONTAINER NEW_IMAGE</code> - Creates a new image from a container's changes.</li>
+    </ul>
+
+    <h2>Image Management</h2>
+    <ul>
+        <li><code>docker images [options]</code> - Lists all available images on the system.</li>
+        <li><code>docker pull IMAGE[:TAG]</code> - Downloads an image from a Docker registry.</li>
+        <li><code>docker push IMAGE[:TAG]</code> - Uploads a local image to a Docker registry.</li>
+        <li><code>docker rmi [options] IMAGE</code> - Removes one or more images.</li>
+        <li><code>docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]</code> - Tags an image with a new name or tag.</li>
+        <li><code>docker build [options] PATH | URL | -</code> - Builds an image from a Dockerfile.</li>
+        <li><code>docker history IMAGE</code> - Shows the history of an image.</li>
+    </ul>
+
+    <h2>Network Management</h2>
+    <ul>
+        <li><code>docker network ls</code> - Lists all Docker networks.</li>
+        <li><code>docker network inspect NETWORK</code> - Displays detailed information about a Docker network.</li>
+        <li><code>docker network create [options] NAME</code> - Creates a new Docker network.</li>
+        <li><code>docker network connect NETWORK CONTAINER</code> - Connects a container to a network.</li>
+        <li><code>docker network disconnect NETWORK CONTAINER</code> - Disconnects a container from a network.</li>
+    </ul>
+
+    <h2>Volume Management</h2>
+    <ul>
+        <li><code>docker volume ls</code> - Lists all Docker volumes.</li>
+        <li><code>docker volume create [options] NAME</code> - Creates a new Docker volume.</li>
+        <li><code>docker volume inspect VOLUME</code> - Displays detailed information about a volume.</li>
+        <li><code>docker volume rm VOLUME</code> - Removes a volume.</li>
+        <li><code>docker volume prune</code> - Removes all unused volumes.</li>
+    </ul>
+
+    <h2>System Commands</h2>
+    <ul>
+        <li><code>docker system df</code> - Shows disk usage by Docker objects.</li>
+        <li><code>docker system prune [options]</code> - Cleans up unused containers, networks, images, and volumes.</li>
+        <li><code>docker system info</code> - Displays system-wide information about Docker.</li>
+    </ul>
+
+    <h2>Compose Commands (Docker Compose)</h2>
+    <ul>
+        <li><code>docker compose up [options]</code> - Starts and runs multi-container applications.</li>
+        <li><code>docker compose down [options]</code> - Stops and removes containers defined in the <code>docker-compose.yml</code> file.</li>
+        <li><code>docker compose ps</code> - Lists containers managed by Docker Compose.</li>
+        <li><code>docker compose logs [options]</code> - Displays logs from services defined in the <code>docker-compose.yml</code>.</li>
+    </ul>
+</body>
+</html>
